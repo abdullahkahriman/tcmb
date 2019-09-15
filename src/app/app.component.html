@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="card-container">
+    <div class="card" *ngIf="!loading && !errMsg">
+      <h1>{{ title }}</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Döviz Cinsi </th>
+            <th>Döviz Alış</th>
+            <th>Döviz Satış</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr [style.backgroundColor]="item['@Kod']==currentID ? '#f35741' : item['@Kod']==exID ? '#c89547': ''"
+            [style.color]="item['@Kod']==currentID ? '#fff' : item['@Kod']==exID ? '#fff': ''"
+            *ngFor="let item of list">
+            <td>
+              {{ item.Isim }}
+            </td>
+            <td>{{ item.ForexBuying }}</td>
+            <td>{{ item.ForexSelling || '-' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card" *ngIf="!loading && !errMsg">
+      <h1>Kur Hesapla</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Mevcut Döviz Cinsi</th>
+            <td>
+              <select [(ngModel)]="currentID">
+                <option value="{{ cu['@Kod'] }}" *ngFor="let cu of currentExchangeList">
+                  {{ cu.Isim }}
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>Çevrilecek Döviz Cinsi</th>
+            <td>
+              <select [(ngModel)]="exID">
+                <option value="{{ ex['@Kod'] }}" *ngFor="let ex of exchangeRateList">
+                  {{ ex.Isim }}
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>Tutar</th>
+            <td>
+              <input type="number" [(ngModel)]="price" placeholder="Tutar" autofocus min="0" />
+            </td>
+          </tr>
+          <tr>
+            <th colspan="2" [style.color]="!errCheck().isSuccess ? 'darkred' : 'green'">
+              {{ errCheck().msg }}
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+  <div class="loading" *ngIf="loading">Kurlar yükleniyor ...</div>
+  <div class="err" *ngIf="errMsg">Kurlar gösterilirken bir hata oluştu</div>
+</div>
+
+<router-outlet></router-outlet>
