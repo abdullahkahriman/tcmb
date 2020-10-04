@@ -12,3 +12,7 @@ C:\PROJECTS\CUSTOM\ANGULAR\tcmb\TCMB\TCMB\obj\Debug\netcoreapp2.2\TCMB.AssemblyI
 C:\PROJECTS\CUSTOM\ANGULAR\tcmb\TCMB\TCMB\obj\Debug\netcoreapp2.2\TCMB.RazorTargetAssemblyInfo.cache
 C:\PROJECTS\CUSTOM\ANGULAR\tcmb\TCMB\TCMB\obj\Debug\netcoreapp2.2\TCMB.dll
 C:\PROJECTS\CUSTOM\ANGULAR\tcmb\TCMB\TCMB\obj\Debug\netcoreapp2.2\TCMB.pdb
+C:\PROJECTS\CUSTOM\ANGULAR\tcmb\TCMB\TCMB\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\PROJECTS\CUSTOM\ANGULAR\tcmb\TCMB\TCMB\bin\Debug\netcoreapp2.2\appsettings.json
+C:\PROJECTS\CUSTOM\ANGULAR\tcmb\TCMB\TCMB\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\PROJECTS\CUSTOM\ANGULAR\tcmb\TCMB\TCMB\obj\Debug\netcoreapp2.2\TCMB.genruntimeconfig.cache
