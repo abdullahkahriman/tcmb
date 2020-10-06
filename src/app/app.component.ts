@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     try {
       this.loading = true;
-      this.http.get('https://tcmb.vercel.app/api/kur/')
+      this.http.get('https://localhost:44335/api/kur/')
         .subscribe((c: any) => {
           c.forEach((element, index) => {
             if (index === 0) {
